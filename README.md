@@ -30,6 +30,8 @@ Usuario → RouterChain → (Strength | Endurance | Hypertrophy)
 ---
 
 ## 📂 Organización del repositorio
+
+```bash
 fitness-gym-coach-ai/                                                     \
 │                                                                         \
 ├── src/                                                                  \
@@ -52,7 +54,8 @@ fitness-gym-coach-ai/                                                     \
 ├── README.md                 # Este archivo                              \
 ├── requirements.txt          # Dependencias                              \
 └── environment.yml           # Configuración alternativa para Conda      \
-\
+```
+
 ---
 
 ## ⚙️ Instalación
@@ -61,6 +64,7 @@ fitness-gym-coach-ai/                                                     \
 ```bash
 git clone https://github.com/<tu-usuario>/fitness-gym-coach-ai.git
 cd fitness-gym-coach-ai
+```
 
 ### 2. Instalar dependencias
 
