@@ -30,29 +30,29 @@ Usuario → RouterChain → (Strength | Endurance | Hypertrophy)
 ---
 
 ## 📂 Organización del repositorio
-fitness-gym-coach-ai/
-│
-├── src/
-│   ├── main.py               # Punto de entrada del agente
-│   ├── chains/
-│   │   └── router_chain.py   # Lógica de enrutamiento
-│   ├── graph/
-│   │   └── workflow.py       # Definición del grafo LangGraph
-│   ├── prompts/
-│   │   └── templates.py      # Prompt templates
-│   ├── tools/
-│   │   └── calculator.py     # Herramienta de cálculo de calorías
-│   └── memory/
-│       └── setup.py          # Configuración de memoria
-│
-├── notebooks/                # Experimentos en Jupyter
-├── prompts/                  # Archivos de texto con ejemplos
-├── logs/                     # Registro de interacciones
-├── report/                   # Informe académico (PDF)
-├── README.md                 # Este archivo
-├── requirements.txt          # Dependencias
-└── environment.yml           # Configuración alternativa para Conda
-
+fitness-gym-coach-ai/                                                     \
+│                                                                         \
+├── src/                                                                  \
+│   ├── main.py               # Punto de entrada del agente               \
+│   ├── chains/                                                           \
+│   │   └── router_chain.py   # Lógica de enrutamiento                    \
+│   ├── graph/                                                            \
+│   │   └── workflow.py       # Definición del grafo LangGraph            \
+│   ├── prompts/                                                          \
+│   │   └── templates.py      # Prompt templates                          \
+│   ├── tools/                                                            \
+│   │   └── calculator.py     # Herramienta de cálculo de calorías        \
+│   └── memory/                                                           \
+│       └── setup.py          # Configuración de memoria                  \
+│                                                                         \
+├── notebooks/                # Experimentos en Jupyter                   \
+├── prompts/                  # Archivos de texto con ejemplos            \
+├── logs/                     # Registro de interacciones                 \
+├── report/                   # Informe académico (PDF)                   \
+├── README.md                 # Este archivo                              \
+├── requirements.txt          # Dependencias                              \
+└── environment.yml           # Configuración alternativa para Conda      \
+\
 ---
 
 ## ⚙️ Instalación
