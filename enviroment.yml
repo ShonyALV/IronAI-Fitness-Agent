@@ -1,0 +1,28 @@
+name: fitness-gym-coach-ai
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  # Core
+  - python=3.10
+  - pip
+
+  # LangChain & LangGraph
+  - pip:
+      - langchain>=0.2.0
+      - langgraph>=0.0.20
+
+      # Ollama integration
+      - ollama>=0.1.6
+
+      # Vector store + embeddings
+      - faiss-cpu>=1.7.4
+      - sentence-transformers>=2.2.2
+      - huggingface-hub>=0.23.0
+
+      # Jupyter notebooks
+      - notebook>=7.0.0
+      - ipykernel>=6.29.0
+
+      # Utilities
+      - python-dotenv>=1.0.0
