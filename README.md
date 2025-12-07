@@ -1,129 +1,125 @@
 # 🤖 Fitness Gym Coach AI
 
-Proyecto individual para la materia **Agentes Inteligentes** en Yachay Tech.
-Este agente inteligente está diseñado con **LangChain** y **LangGraph**, utilizando el modelo **Mistral 7B en Ollama**, para actuar como un **entrenador personal virtual** especializado en rutinas de gimnasio.
+Individual project for the **Intelligent Agents** course at Yachay Tech University.  
+This intelligent agent is built with **LangChain** and **LangGraph**, using the **Mistral 7B model in Ollama**, to act as a **virtual personal trainer** specialized in gym routines.
 
 ---
 
-## 📌 Objetivo
-El agente ayuda a los usuarios a:
-- Definir objetivos de entrenamiento (fuerza, resistencia, hipertrofia).
-- Generar planes semanales personalizados en formato JSON.
-- Recordar progresos previos mediante memoria conversacional y vectorial.
-- Calcular calorías quemadas según tipo de ejercicio y duración.
-- Proporcionar recomendaciones claras y motivadoras.
+## 📌 Objective
+The agent helps users to:
+- Define training goals (strength, endurance, hypertrophy).
+- Generate personalized weekly plans in JSON format.
+- Recall previous progress through conversational and vector memory.
+- Calculate calories burned based on exercise type and duration.
+- Provide clear and motivational recommendations.
 
 ---
 
-## 🏗️ Arquitectura del Agente
-El agente se construye con:
-- **LangChain** → Prompt engineering, RouterChain, SequentialChain, memoria.
-- **LangGraph** → Flujo de nodos con enrutamiento y herramientas.
-- **Ollama (Mistral 7B)** → Modelo LLM ligero y eficiente.
-- **Memoria** → ConversationalBufferMemory + VectorStoreRetrieverMemory.
-- **Herramientas** → Calculadora de calorías.
+## 🏗️ Agent Architecture
+The agent is built with:
+- **LangChain** → Prompt engineering, RouterChain, SequentialChain, memory.
+- **LangGraph** → Node flow with routing and tools.
+- **Ollama (Mistral 7B)** → Lightweight and efficient LLM model.
+- **Memory** → ConversationalBufferMemory + VectorStoreRetrieverMemory.
+- **Tools** → Calorie calculator.
 
-### Flujo del agente
-Usuario → RouterChain → (Strength | Endurance | Hypertrophy)
+### Agent Flow
+User → RouterChain → (Strength | Endurance | Hypertrophy)
 → MemoryNode → ToolNode → OutputNode
 
 ---
 
-## 📂 Organización del repositorio
+## 📂 Repository Structure
 
 ```bash
 fitness-gym-coach-ai/                                                     \
 │                                                                         \
 ├── src/                                                                  \
-│   ├── main.py               # Punto de entrada del agente               \
+│   ├── main.py               # Agent entry point                         \
 │   ├── chains/                                                           \
-│   │   └── router_chain.py   # Lógica de enrutamiento                    \
+│   │   └── router_chain.py   # Routing logic                             \
 │   ├── graph/                                                            \
-│   │   └── workflow.py       # Definición del grafo LangGraph            \
+│   │   └── workflow.py       # LangGraph workflow definition             \
 │   ├── prompts/                                                          \
 │   │   └── templates.py      # Prompt templates                          \
 │   ├── tools/                                                            \
-│   │   └── calculator.py     # Herramienta de cálculo de calorías        \
+│   │   └── calculator.py     # Calorie calculation tool                  \
 │   └── memory/                                                           \
-│       └── setup.py          # Configuración de memoria                  \
+│       └── setup.py          # Memory setup                              \
 │                                                                         \
-├── notebooks/                # Experimentos en Jupyter                   \
-├── prompts/                  # Archivos de texto con ejemplos            \
-├── logs/                     # Registro de interacciones                 \
-├── report/                   # Informe académico (PDF)                   \
-├── README.md                 # Este archivo                              \
-├── requirements.txt          # Dependencias                              \
-└── environment.yml           # Configuración alternativa para Conda      \
+├── notebooks/                # Jupyter experiments                       \
+├── prompts/                  # Text files with examples                  \
+├── logs/                     # Interaction logs                          \
+├── report/                   # Academic report (PDF)                     \
+├── README.md                 # This file                                 \
+├── requirements.txt          # Dependencies                              \
+└── environment.yml           # Alternative Conda configuration           \
 ```
 
 ---
 
-## ⚙️ Instalación
+## ⚙️ Installation
 
-### 1. Clonar repositorio
+### 1. Clone repository
 ```bash
-git clone https://github.com/<tu-usuario>/fitness-gym-coach-ai.git
+git clone https://github.com/<your-username>/fitness-gym-coach-ai.git
 cd fitness-gym-coach-ai
 ```
 
-### 2. Instalar dependencias
+### 2. Install dependencies
 
 ```bash
 pip install -r requirements.txt
-
 ```
 
-### 3. Instalar Ollama y modelo Mistral
+### 3. Install Ollama and Mistral model
 
-Descargar Ollama desde [ollama.ai](https://ollama.ai/).
+Download Ollama from [ollama.ai](https://ollama.ai/).
 
-Luego instalar el modelo Mistral 7B:
+Then install the Mistral 7B model:
 
 ```bash
 ollama pull mistral
-
 ```
 
 ---
 
-## ▶️ Ejecución
+## ▶️ Execution
 
-Ejecutar el agente desde consola:
+Run the agent from console:
 
 ```bash
 python src/main.py
-
 ```
 
-Ejemplo de interacción:
+Example interaction:
 
 ```
-🤖 Fitness Gym Coach AI iniciado...
-👉 Ingresa tu objetivo de entrenamiento: Quiero ganar músculo en 3 meses
+🤖 Fitness Gym Coach AI started...
+👉 Enter your training goal: I want to gain muscle in 3 months
 
-=== Plan generado ===
+=== Generated Plan ===
 {
-  "Lunes": "Sentadillas 5x5",
-  "Martes": "Press banca 5x5",
+  "Monday": "Squats 5x5",
+  "Tuesday": "Bench press 5x5",
   ...
 }
-
 ```
 
 ---
 
-## 📊 Evaluación
+## 📊 Evaluation
 
-El proyecto incluye:
+The project includes:
 
-- Logging de prompts y outputs en `logs/`.
-- Evaluación de calidad (claridad, utilidad, exactitud).
-- Análisis de errores y mejoras.
+- Prompt and output logging in `logs/`.
+- Quality evaluation (clarity, usefulness, accuracy).
+- Error analysis and improvements.
 
 ---
 
-## 📚 Créditos
+## 📚 Credits
 
-- Autor: **Jhony Peñaherrera**
-- Universidad: **Yachay Tech**
-- Materia: **Agentes Inteligentes (2025)**
+- Author: **Jhony Peñaherrera**
+- University: **Yachay Tech**
+- Course: **Intelligent Agents (2025)**
